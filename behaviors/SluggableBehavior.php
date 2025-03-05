@@ -82,7 +82,7 @@ class SluggableBehavior extends BaseSluggableBehavior
 
         // Configure  Inflector helper
         if (!is_null($this->locale) && is_string($this->locale))
-            $this->_inflector->transliterator = $this->locale;
+            $this->_inflector::$transliterator = $this->locale;
 
         if (!is_null($this->fallback) && is_array($this->fallback))
             $this->_inflector->transliteration = $this->fallback;
